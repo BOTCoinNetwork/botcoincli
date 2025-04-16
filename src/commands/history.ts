@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
 
-import { Arguments, Command, Options, Session } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session } from 'bvm-cli-bot';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
@@ -11,10 +11,10 @@ type Opts = Options & {
 
 export type Args = Arguments<Opts> & {};
 
-export default (monetcli: Vorpal, session: Session) => {
+export default (botcoincli: Vorpal, session: Session) => {
 	const description = 'Show validator history';
 
-	return monetcli
+	return botcoincli
 		.command('history')
 		.alias('h')
 		.option('-h, --host <ip>', 'override config host value')

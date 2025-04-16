@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
 
-import { Arguments, Command, Options, Session, Table } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session, Table } from 'bvm-cli-bot';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
@@ -14,10 +14,10 @@ export type Args = Arguments<Opts> & {
 	round: number;
 };
 
-export default (monetcli: Vorpal, session: Session) => {
+export default (botcoincli: Vorpal, session: Session) => {
 	const description = 'Get validators by consensus round';
 
-	return monetcli
+	return botcoincli
 		.command('validators [round]')
 		.option('-f, --formatted', 'format output')
 		.option('-h, --host <ip>', 'override config host value')

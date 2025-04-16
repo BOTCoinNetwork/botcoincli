@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { CLIOptions, init } from 'evm-lite-cli';
+import { CLIOptions, init } from 'bvm-cli-bot';
 import { osdatadir } from 'evm-lite-datadir';
 
 import {
@@ -30,7 +30,7 @@ import {
 	// misc
 	poaWhitelist,
 	transfer
-} from 'evm-lite-cli';
+} from 'bvm-cli-bot';
 
 // custom commands
 import block from './commands/block';
@@ -39,10 +39,10 @@ import validators from './commands/validators';
 import version from './commands/version';
 
 const options: CLIOptions = {
-	name: 'Monet CLI',
-	delimiter: 'monetcli',
+	name: 'Botcoin CLI',
+	delimiter: 'botcoincli',
 	datadir: osdatadir('Monet'),
-	config: 'monetcli'
+	config: 'botcoincli'
 };
 
 const commands = [

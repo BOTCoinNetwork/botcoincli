@@ -1,8 +1,8 @@
 {
-	"name": "monetcli",
-	"version": "1.3.1",
-	"main": "./dist/monetcli.js",
-	"typings": "./dist/typings/monetcli.d.ts",
+	"name": "botcoincli-rrr",
+	"version": "1.0.1",
+	"main": "./dist/botcoincli.js",
+	"typings": "./dist/typings/botcoincli.d.ts",
 	"license": "MIT",
 	"author": "Mosaic Networks",
 	"authors": [
@@ -22,15 +22,15 @@
 		"dev": "yarn install --registry http://192.168.1.15:1234",
 		"publish:dev": "yarn publish --registry http://192.168.1.15:1234",
 		"add:dev": "yarn add --registry http://192.168.1.15:1234",
-		"linkalldev": "yarn link evm-lite-core evm-lite-consensus evm-lite-keystore evm-lite-datadir evm-lite-client evm-lite-utils evm-lite-cli",
-		"i": "ts-node src/monetcli i",
-		"e": "ts-node src/monetcli",
+		"linkalldev": "yarn link evm-lite-core evm-lite-consensus evm-lite-keystore evm-lite-datadir evm-lite-client bvm-lite-utils bvm-cli-bot",
+		"i": "ts-node src/botcoincli i",
+		"e": "ts-node src/botcoincli",
 		"pkg": "pkg . --out-path ./bin"
 	},
 	"dependencies": {
+		"bvm-cli-bot": "^1.0.1",
 		"chalk": "^2.4.2",
 		"cli-table": "^0.3.1",
-		"evm-lite-cli": "^1.4.1",
 		"evm-lite-client": "^1.3.7",
 		"evm-lite-consensus": "^1.3.7",
 		"evm-lite-core": "^1.3.7",
@@ -58,11 +58,11 @@
 		"typescript": "^3.6.3"
 	},
 	"bin": {
-		"monetcli": "./dist/monetcli.js"
+		"botcoincli": "./dist/botcoincli.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mosaicnetworks/monetcli.git"
+		"url": "https://github.com/mosaicnetworks/botcoincli.git"
 	},
 	"pkg": {
 		"assets": [

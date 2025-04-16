@@ -1,13 +1,13 @@
 import Vorpal from 'vorpal';
 
-import { Arguments, Command, Options, Session } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session } from 'bvm-cli-bot';
 
 const pkg = require('../../package.json');
 
-export default (monetcli: Vorpal, session: Session): Command => {
+export default (botcoincli: Vorpal, session: Session): Command => {
 	const description = 'Display current version of cli';
 
-	return monetcli
+	return botcoincli
 		.command('version')
 		.alias('v')
 		.option('-d, --debug', 'show debug output')
@@ -40,7 +40,7 @@ class VersionCommand extends Command {
 			'evm-lite-keystore',
 			'evm-lite-consensus',
 			'evm-lite-client',
-			'evm-lite-cli'
+			'bvm-cli-bot'
 		];
 
 		for (const mod of modules) {

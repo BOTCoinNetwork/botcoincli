@@ -1,6 +1,6 @@
 import Vorpal from 'vorpal';
 
-import { Arguments, Command, Options, Session } from 'evm-lite-cli';
+import { Arguments, Command, Options, Session } from 'bvm-cli-bot';
 import { Babble } from 'evm-lite-consensus';
 import { Monet } from 'evm-lite-core';
 
@@ -13,10 +13,10 @@ export type Args = Arguments<Opts> & {
 	block: number;
 };
 
-export default (monetcli: Vorpal, session: Session) => {
+export default (botcoincli: Vorpal, session: Session) => {
 	const description = 'Display details of a block by index';
 
-	return monetcli
+	return botcoincli
 		.command('block [block]')
 		.alias('b')
 		.option('-h, --host <ip>', 'override config host value')

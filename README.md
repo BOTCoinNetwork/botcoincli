@@ -2,7 +2,7 @@
 
 # Monet CLI
 
-[![npm version](https://badge.fury.io/js/monetcli.svg)](https://badge.fury.io/js/monetcli)
+[![npm version](https://badge.fury.io/js/botcoincli.svg)](https://badge.fury.io/js/botcoincli)
 
 A CLI wallet to interact with the Monet Hub.
 
@@ -17,34 +17,34 @@ A CLI wallet to interact with the Monet Hub.
 
 ## Overview
 
-This is a wrapper around [`evm-lite-cli`](https://github.com/mosaicnetworks/evm-lite-cli).
+This is a wrapper around [`bvm-cli-test`](https://github.com/mosaicnetworks/bvm-cli-test).
 
-Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `evm-lite-cli`
+Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `bvm-cli-test`
 
 You can read more about `monetd` and how to get started in the documentation [here](https://monetd.readthedocs.io/en/latest/index.html).
 
 ## Installation
 
-You can easily install `monetcli` with NPM
+You can easily install `botcoincli` with NPM
 
 ```bash
-$ npm install -g monetcli
+$ npm install -g botcoincli
 ```
 
 or with `yarn`
 
 ```bash
-$ yarn global add monetcli
+$ yarn global add botcoincli
 ```
 
 ## Commands
 
 ### Flags
 
-The global flag `-d, --datadir` specifies the directory where `keystore` and `monetcli.toml` are stored unless overwritten by specific flags.
+The global flag `-d, --datadir` specifies the directory where `keystore` and `botcoincli.toml` are stored unless overwritten by specific flags.
 
 ```bash
-$ monetcli --datadir <path> <command>
+$ botcoincli --datadir <path> <command>
 ```
 
 Commands also have two logging level flags `--silent` and `--debug` which will silence and show debug logs respectively.
@@ -54,16 +54,16 @@ Commands also have two logging level flags `--silent` and `--debug` which will s
 For example to show JSON output for the `info` command:
 
 ```console
-$ monetcli info --json
+$ botcoincli info --json
 
-monetcli http GET camille.monet.network:8080/info
+botcoincli http GET camille.monet.network:8080/info
 
 {"consensus_events":"4121","consensus_transactions":"99","events_per_second":"0.00","id":"3048798009","last_block_index":"112","last_consensus_round":"445","last_peer_change":"258","min_gas_price":"10","moniker":"mosaic","num_peers":"4","round_events":"0","rounds_per_second":"0.00","state":"Babbling","sync_rate":"1.00","time":"1574268876085188708","transaction_pool":"0","type":"babble","undetermined_events":"19"}
 ```
 
 ## Data Directory
 
-The first time `monetcli` runs, and if no options are specified, it creates a
+The first time `botcoincli` runs, and if no options are specified, it creates a
 special directory in a default location, where it
 stores any relevant information.
 
@@ -73,14 +73,14 @@ stores any relevant information.
 
 In particular, this directory contains the following items:
 
--   **monetcli.toml**: where global options are specified
+-   **botcoincli.toml**: where global options are specified
 -   **keystore**: where all encrypted account keys are stored
 
 **This directory is shared by [monetd](https://github.com/mosaicnetworks/monetd).**
 
-### `monetcli.toml`
+### `botcoincli.toml`
 
-Example monetcli.toml:
+Example botcoincli.toml:
 
 ```toml
 [connection]
@@ -110,11 +110,11 @@ gasPrice = 0
 
 _Note: `from` refers to the `moniker` of the account not the `address`._
 
-To change default configuration values run `monetcli config set -i` or `monetcli c s -i`. You will be
+To change default configuration values run `botcoincli config set -i` or `botcoincli c s -i`. You will be
 taken to an interactive prompt to change connection and default values.
 
 ```console
-$ monetcli config set -i
+$ botcoincli config set -i
 
 ? Host: localhost
 ? Port: 8080
@@ -125,10 +125,10 @@ $ monetcli config set -i
 
 ### Change DataDir Path
 
-The global flag `-d, --datadir` specifies the directory where `keystore` and `monetcli.toml` which defaults to the paths defined above.
+The global flag `-d, --datadir` specifies the directory where `keystore` and `botcoincli.toml` which defaults to the paths defined above.
 
 ```bash
-$ monetcli --datadir <path> <command>
+$ botcoincli --datadir <path> <command>
 ```
 
 ## Proof of Authority
