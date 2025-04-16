@@ -26,9 +26,13 @@ import {
 	poaNomineeList,
 	poaNomineeNew,
 	poaNomineeVote,
+	
+	// stake
+	poaWhitelist,
+	stake,
 
 	// misc
-	poaWhitelist,
+	stakeList,
 	transfer
 } from 'bvm-cli-bot';
 
@@ -72,6 +76,9 @@ const commands = [
 	poaEvicteeList,
 	poaEvicteeNew,
 	poaEvicteeVote,
+
+	stake,
+	stakeList,
 
 	block,
 	validators,
