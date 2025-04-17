@@ -26,13 +26,14 @@ import {
 	poaNomineeList,
 	poaNomineeNew,
 	poaNomineeVote,
-	
-	// stake
 	poaWhitelist,
+
+	// stake
 	stake,
+	stakeList,
 
 	// misc
-	stakeList,
+	
 	transfer
 } from 'bvm-cli-bot';
 
