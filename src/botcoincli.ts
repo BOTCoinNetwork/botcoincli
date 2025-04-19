@@ -32,6 +32,7 @@ import {
 	stake,
 	stakeCheck,
 	stakeList,
+	stakeWithdraw,
 
 	// misc
 	
@@ -82,6 +83,7 @@ const commands = [
 	stake,
 	stakeList,
 	stakeCheck,
+	stakeWithdraw,
 
 	block,
 	validators,
