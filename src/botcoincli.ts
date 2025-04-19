@@ -30,6 +30,7 @@ import {
 
 	// stake
 	stake,
+	stakeCheck,
 	stakeList,
 
 	// misc
@@ -80,6 +81,7 @@ const commands = [
 
 	stake,
 	stakeList,
+	stakeCheck,
 
 	block,
 	validators,
