@@ -1,10 +1,10 @@
-<img width="75px" height="75px" align="right" alt="Monet Logo" src="https://github.com/mosaicnetworks/monetd/raw/master/docs/_static/monet_logo.png" title="Monet CLI"/>
+<img width="75px" height="75px" align="right" alt="Botcoin Logo" src="https://github.com/mosaicnetworks/monetd/raw/master/docs/_static/monet_logo.png" title="Botcoin CLI"/>
 
-# Monet CLI
+# Botcoin CLI
 
 [![npm version](https://badge.fury.io/js/botcoincli.svg)](https://badge.fury.io/js/botcoincli)
 
-A CLI wallet to interact with the Monet Hub.
+A CLI wallet to interact with the Botcoin Hub.
 
 ## Table of Contents
 
@@ -19,9 +19,9 @@ A CLI wallet to interact with the Monet Hub.
 
 This is a wrapper around [`bvm-cli-test`](https://github.com/mosaicnetworks/bvm-cli-test).
 
-Any Monet Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`monetd`](https://github.com/mosaicnetworks/monetd) instance as some functionality may not be accessible through `bvm-cli-test`
+Any Botcoin Hub specific commands will be implemented here. It is advised to use this CLI to interact with a [`botcoin`](https://github.com/BOTCoinNetwork/Botcoin) instance as some functionality may not be accessible through `bvm-cli-test`
 
-You can read more about `monetd` and how to get started in the documentation [here](https://monetd.readthedocs.io/en/latest/index.html).
+You can read more about `botcoin` and how to get started in the documentation [here](https://botcoin.network/docs/html/index.html).
 
 ## Installation
 
@@ -56,7 +56,7 @@ For example to show JSON output for the `info` command:
 ```console
 $ botcoincli info --json
 
-botcoincli http GET camille.monet.network:8080/info
+botcoincli http GET camille.botcoin.network:8080/info
 
 {"consensus_events":"4121","consensus_transactions":"99","events_per_second":"0.00","id":"3048798009","last_block_index":"112","last_consensus_round":"445","last_peer_change":"258","min_gas_price":"10","moniker":"mosaic","num_peers":"4","round_events":"0","rounds_per_second":"0.00","state":"Babbling","sync_rate":"1.00","time":"1574268876085188708","transaction_pool":"0","type":"babble","undetermined_events":"19"}
 ```
@@ -67,16 +67,16 @@ The first time `botcoincli` runs, and if no options are specified, it creates a
 special directory in a default location, where it
 stores any relevant information.
 
--   Linux: `~/.monet`
--   Mac OS: `~/Library/MONET`
--   Windows: `~/AppData/Roaming/MONET`
+-   Linux: `~/.botcoin`
+-   Mac OS: `~/Library/Botcoin`
+-   Windows: `~/AppData/Roaming/Botcoin`
 
 In particular, this directory contains the following items:
 
 -   **botcoincli.toml**: where global options are specified
 -   **keystore**: where all encrypted account keys are stored
 
-**This directory is shared by [monetd](https://github.com/mosaicnetworks/monetd).**
+**This directory is shared by [botcoin](https://github.com/mosaicnetworks/botcoin).**
 
 ### `botcoincli.toml`
 
@@ -99,13 +99,13 @@ from = "moniker"
 
 # Gas will only default to this value for contract
 # calls as transfer will take a maximum of 21000 gas
-gas = 1000000
+gas = 21000
 
 # DEPRECATED
 # Commands requiring gas price will pull the
 # minimum gas price of the requested node and
 # use with the transaction.
-gasPrice = 0
+gasPrice = 100000000000000
 ```
 
 _Note: `from` refers to the `moniker` of the account not the `address`._
@@ -133,4 +133,4 @@ $ botcoincli --datadir <path> <command>
 
 ## Proof of Authority
 
-The Monet Hub uses Proof of Authority with [EVM-Lite](https://github.com/mosaicnetworks/evm-lite) and [Babble](https://github.com/mosaicnetworks/babble).
+The Botcoin Hub uses Proof of Authority with [EVM-Lite](https://github.com/BOTCoinNetwork/BVM) and [Babble](https://github.com/BOTCoinNetwork/babble).

@@ -48,7 +48,7 @@ import version from './commands/version';
 const options: CLIOptions = {
 	name: 'Botcoin CLI',
 	delimiter: 'botcoincli',
-	datadir: osdatadir('Monet'),
+	datadir: osdatadir('Botcoin'),
 	config: 'botcoincli'
 };
 
